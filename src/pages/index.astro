@@ -29,10 +29,10 @@ import Layout from '../layouts/Layout.astro';
       <div class="space-y-4">
         <form 
           class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-4" 
-          action="mailto:info@miosollecito.it?subject=Richiesta%20Beta%20Gratuita&body=Ciao,%20vorrei%20iscrivermi%20alla%20beta%20gratuita%20di%20miosollecito.it" 
-          method="GET"
+          action="/api/signup" 
+          method="POST"
         >
-          <input type="hidden" name="form-name" value="hero-signup" />
+          <input type="hidden" name="source" value="hero-section" />
           <div style="display: none;">
             <input name="bot-field" />
           </div>
@@ -273,11 +273,11 @@ import Layout from '../layouts/Layout.astro';
       <div class="max-w-md mx-auto">
         <form 
           class="flex flex-col sm:flex-row gap-4" 
-          action="mailto:info@miosollecito.it?subject=Richiesta%20Beta%20Gratuita&body=Ciao,%20vorrei%20iscrivermi%20alla%20beta%20gratuita%20di%20miosollecito.it" 
-          method="GET"
+          action="/api/signup" 
+          method="POST"
         >
           <!-- Honeypot field for spam protection -->
-          <input type="hidden" name="form-name" value="beta-signup" />
+          <input type="hidden" name="source" value="cta-finale" />
           <div style="display: none;">
             <input name="bot-field" />
           </div>
