@@ -27,9 +27,33 @@ import Layout from '../layouts/Layout.astro';
       
       <!-- Primary CTA -->
       <div class="space-y-4">
-        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transform hover:scale-105 transition-all duration-200">
-          🚀 BETA GRATUITA — Iscriviti in 60s
-        </button>
+        <form 
+          class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-4" 
+          name="hero-signup" 
+          method="POST" 
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/grazie"
+        >
+          <input type="hidden" name="form-name" value="hero-signup" />
+          <div style="display: none;">
+            <input name="bot-field" />
+          </div>
+          
+          <input 
+            type="email" 
+            name="email"
+            placeholder="La tua email" 
+            class="flex-1 px-4 py-3 rounded-lg text-gray-900 font-medium text-lg"
+            required
+          >
+          <button 
+            type="submit"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg shadow-lg transform hover:scale-105 transition-all duration-200 whitespace-nowrap"
+          >
+            🚀 BETA GRATUITA
+          </button>
+        </form>
         <p class="text-sm text-gray-600">✅ Gratis per 14 giorni • ✅ Nessuna carta richiesta • ✅ Setup in 2 minuti</p>
       </div>
     </div>
@@ -250,9 +274,23 @@ import Layout from '../layouts/Layout.astro';
       
       <!-- Email Signup Form -->
       <div class="max-w-md mx-auto">
-        <form class="flex flex-col sm:flex-row gap-4" action="#" method="POST">
+        <form 
+          class="flex flex-col sm:flex-row gap-4" 
+          name="beta-signup" 
+          method="POST" 
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/grazie"
+        >
+          <!-- Honeypot field for spam protection -->
+          <input type="hidden" name="form-name" value="beta-signup" />
+          <div style="display: none;">
+            <input name="bot-field" />
+          </div>
+          
           <input 
             type="email" 
+            name="email"
             placeholder="La tua email" 
             class="flex-1 px-4 py-3 rounded-lg text-gray-900 font-medium"
             required
