@@ -29,11 +29,8 @@ import Layout from '../layouts/Layout.astro';
       <div class="space-y-4">
         <form 
           class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-4" 
-          name="hero-signup" 
-          method="POST" 
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/grazie"
+          action="https://formspree.io/f/xdkoqpzv" 
+          method="POST"
         >
           <input type="hidden" name="form-name" value="hero-signup" />
           <div style="display: none;">
@@ -276,11 +273,8 @@ import Layout from '../layouts/Layout.astro';
       <div class="max-w-md mx-auto">
         <form 
           class="flex flex-col sm:flex-row gap-4" 
-          name="beta-signup" 
-          method="POST" 
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/grazie"
+          action="https://formspree.io/f/xdkoqpzv" 
+          method="POST"
         >
           <!-- Honeypot field for spam protection -->
           <input type="hidden" name="form-name" value="beta-signup" />
